@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Sidebar } from './Sidebar.js';
-import { Map } from './Map.js';
+import { MapContainer } from './MapContainer.js';
 import './bootstrap.min.css';
 import './App.css';
-import config from './config.js';
+
 
 class App extends Component {
   constructor(props){
@@ -23,7 +23,7 @@ class App extends Component {
       userLon: -122.34569190000002,
     }
 
-    var mykey = config.MY_KEY;
+
   }
   render() {
     return (
@@ -42,7 +42,7 @@ class App extends Component {
             <Sidebar />
           </div>
           <div ref="map" className="map col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12">
-            <Map />
+            <MapContainer google={window.google}  />
           </div>
         </div>
       </div>
